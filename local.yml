@@ -31,9 +31,9 @@ services:
       - ./.envs/.local/.postgres
       #- ./.env
     ports:
-      - "8000:8000"
+      - "8002:8002"
     healthcheck:
-      test: curl --fail http://localhost:8000
+      test: curl --fail http://localhost:8002
       interval: 30s
       timeout: 10s
       retries: 3
