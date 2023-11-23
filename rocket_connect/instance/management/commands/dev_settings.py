@@ -80,7 +80,7 @@ class Command(BaseCommand):
             external_token="WPP_EXTERNAL_TOKEN"
         )
         connector.config = {
-            "webhook": "http://django:8000/connector/WPP_EXTERNAL_TOKEN/",
+            "webhook": "http://django:8002/connector/WPP_EXTERNAL_TOKEN/",
             "endpoint": "http://wppconnect:21465",
             "secret_key": "THISISMYSECURETOKEN",
             "instance_name": "test",
@@ -349,7 +349,7 @@ class Command(BaseCommand):
         # configure server webhook api
         configs = [
             ["Site_Url", "http://localhost:3000"],
-            ["Livechat_webhookUrl", "http://django:8000/server/SERVER_EXTERNAL_TOKEN/"],
+            ["Livechat_webhookUrl", "http://django:8002/server/SERVER_EXTERNAL_TOKEN/"],
             ["Livechat_enabled", True],
             ["Livechat_AllowedDomainsList", "localhost"],
             ["Livechat_accept_chats_with_no_agents", True],
@@ -380,7 +380,7 @@ class Command(BaseCommand):
                 "enabled": True,
                 "impersonateUser": True,
                 "event": "sendMessage",
-                "urls": ["http://django:8000/connector/WPP_EXTERNAL_TOKEN/"],
+                "urls": ["http://django:8002/connector/WPP_EXTERNAL_TOKEN/"],
                 "triggerWords": ["zapit"],
                 "targetRoom": "",
                 "channel": "#manager_channel",
@@ -412,7 +412,7 @@ class Command(BaseCommand):
                 "enabled": True,
                 "impersonateUser": True,
                 "event": "sendMessage",
-                "urls": ["http://django:8000/connector/WPP_EXTERNAL_TOKEN/"],
+                "urls": ["http://django:8002/connector/WPP_EXTERNAL_TOKEN/"],
                 "triggerWords": ["rc"],
                 "targetRoom": "",
                 "channel": "#manager_channel",
